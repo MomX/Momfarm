@@ -1,3 +1,5 @@
 ^Momfarm\.Rproj$
 ^\.Rproj\.user$
 ^revdep$
+^\.travis\.yml$
+^cran-comments\.md$
