@@ -1,6 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-[![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+<!-- Badges -->
+[![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental) [![Travis-CI Build Status](https://travis-ci.org/MomX/Momfarm.svg?branch=master)](https://travis-ci.org/MomX/Momfarm) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/Momfarm)](http://cran.r-project.org/package=Momfarm) [![Coverage Status](https://img.shields.io/codecov/c/github/MomX/Momfarm/master.svg)](https://codecov.io/github/MomX/Momfarm?branch=master)
 
 Momfarm
 =======
