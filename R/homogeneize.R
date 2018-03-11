@@ -31,7 +31,7 @@ homogeneize <- function(..., sample=60, procrustes=TRUE, center=TRUE, template=T
     s <- lapply(s, Momocs::coo_sample, sample)
   # superpose
   if (procrustes && length(s)>=2)
-    s <- Momocs::fgProcrustes(s)$rotated %>% a2l
+    s <- Momocs::fgProcrustes(s)$rotated %>% Momocs::a2l
   # center
   if (center)
     s <- lapply(s, Momocs::coo_center)
