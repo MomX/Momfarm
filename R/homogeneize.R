@@ -20,24 +20,33 @@
 #'
 #' @export
 homogeneize <- function(..., sample=60, procrustes=TRUE, center=TRUE, template=TRUE){
+  # silent but restore afterwards
+  op <- options("verbose"=FALSE)
+  on.exit(op)
+
   # turn .. to a list
   s <- list(...)
-  str(s) %>% cat
   # if it was already a list, recover
   if (is.list(s[[1]]))
     s <- s[[1]]
+
   # resample
   if (is.numeric(sample))
     s <- lapply(s, Momocs::coo_sample, sample)
+
   # superpose
   if (procrustes && length(s)>=2)
-    s <- Momocs::fgProcrustes(s)$rotated %>% Momocs::a2l
+    s <- Momocs::fgProcrustes(l2a(s))$rotated %>%
+      Momocs::a2l()
+
   # center
   if (center)
     s <- lapply(s, Momocs::coo_center)
+
   # template
   if (template)
     s <- lapply(s, Momocs::coo_template)
+
   # return this beauty
   s
 }
