@@ -20,8 +20,6 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 ```
-# Momfarm
-
 Breed shapes on top of Momocs. 
 
 Momfarm is, mostly and so far, a place to prototype on shapes visualization.
