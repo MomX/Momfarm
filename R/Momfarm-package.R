@@ -37,7 +37,7 @@ Momfarm_help <- function (topic = NULL) {
 
 #' @rdname Momfarm_helpers
 #' @export
-Momfarm <- function(){
+Momfarm_website <- function(){
   utils::browseURL("http://momx.github.io/Momfarm")
 }
 

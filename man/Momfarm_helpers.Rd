@@ -2,12 +2,12 @@
 % Please edit documentation in R/Momfarm-package.R
 \name{Momfarm_help}
 \alias{Momfarm_help}
-\alias{Momfarm}
+\alias{Momfarm_website}
 \title{Momfarm helpers}
 \usage{
 Momfarm_help(topic = NULL)
 
-Momfarm()
+Momfarm_website()
 }
 \arguments{
 \item{topic}{\code{character} function name, quoted}

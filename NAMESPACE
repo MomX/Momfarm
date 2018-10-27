@@ -2,8 +2,8 @@
 
 S3method(plot,cool)
 S3method(print,cool)
-export(Momfarm)
 export(Momfarm_help)
+export(Momfarm_website)
 export(as_coo)
 export(as_cool)
 export(check_coo)
