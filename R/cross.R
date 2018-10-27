@@ -37,6 +37,56 @@ cross <- function(..., ratio=0.5, steps){
 # }
 #
 
+#' Cross shapes gadget
+#'
+#' Calculates intermediates forms between two shapes using a gadget
+#' @param ... two shapes, or a [cool] or a list of shapes.
+#' Only the first two will be crossed. In all cases, they need to be [homogeneize]d.
+#' @param steps `integer` to feed [cross], number of intermediate steps
+#' @param interval `integer` to feed [shiny::animationOptions], time between frames in milliseconds
+#' @return a [cool]
+#' @examples
+#' \dontrun{
+#' s <- shapes %>% pick(1:2) %>% homogeneize()
+#' s %>% cross_g
+#' }
+#' @export
+cross_g <- function(..., steps=100, interval=1000/15){
+  # requireNamespace(miniUI)
+  # requireNamespace(shiny)
+
+  # turn .. to a list
+  s <- list(...)
+  # if it was already a list, recover
+  if (is.list(s[[1]]))
+    s <- s[[1]]
+
+
+  ui <- miniPage(
+    gadgetTitleBar("Cross"),
+    fillCol(
+      plotOutput("plot", width="100%"),
+
+      sliderInput("frame", "", 1, steps, 1, 1,
+                  animate=animationOptions(interval = interval, loop=TRUE),
+                  width="80%"),
+      flex=c(4, 1)
+    )
+  )
+
+  server <- function(input, output, session) {
+    # reactiveValues()
+
+    x <- cross(list(s[[1]], s[[2]]), steps=steps)
+
+    output$plot <- renderPlot({
+      x[[input$frame]] %>% list %>% paper_white() %>% draw_outline()
+    })
+
+  }
+  runGadget(shinyApp(ui, server), viewer = paneViewer())
+}
+
 
 
 

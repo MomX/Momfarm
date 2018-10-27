@@ -7,6 +7,8 @@
 #' on top of Momocs. It is a place to prototype in several directions.
 #'
 #' @import Momocs
+#' @import miniUI
+#' @import shiny
 #' @docType package
 #' @name Momfarm
 NULL
