@@ -7,3 +7,6 @@
 pkgdown
 ^docs$
 ^pkgdown$
+tmp/
+^CONDUCT\.md$
+^codecov\.yml$

@@ -18,3 +18,25 @@ NULL
                         utils::packageDescription('Momfarm', field='Version'),
                         appendLF = TRUE)
 }
+
+#' Momfarm helpers
+#'
+#' Simple utilities to smooth package use
+#'
+#' @param topic `character` function name, quoted
+#'
+#' @rdname Momfarm_helpers
+#' @export
+Momfarm_help <- function (topic = NULL) {
+  url <- "http://momx.github.io/Momocs/reference/"
+  if (!is.null(topic))
+    url <- paste0(url, topic, ".html")
+  utils::browseURL(url)
+}
+
+#' @rdname Momfarm_helpers
+#' @export
+Momfarm_website <- function(){
+  utils::browseURL("http://momx.github.io/Momfarm")
+}
+

@@ -1,15 +1,18 @@
 Package: Momfarm
 Version: 0.1.0
 Title: Momfarm
+Date: 2018-10-27
 Description: Breed shapes on top of Momocs. 
              Momfarm is, mostly and so far, a place to prototype on shapes visualization.
-Authors@R: person("Vincent", "Bonhomme", email = "MomX@vbonhomme.fr", role = c("aut", "cre"))
+Authors@R: person("Vincent", "Bonhomme", email = "bonhomme.vincent@gmail.com", role = c("aut", "cre"))
 License: GPL-3 + file LICENSE
 Encoding: UTF-8
 LazyData: true
 ByteCompile: true
 Depends: Momocs
+Imports: crayon, utils
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.0.1
-Suggests: 
-    testthat
+Suggests:
+    testthat,
+    covr

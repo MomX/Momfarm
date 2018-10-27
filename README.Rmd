@@ -26,24 +26,29 @@ Momfarm is, mostly and so far, a place to prototype on shapes visualization.
 
 ## Installation
 
-You can install the development version from [GitHub](https://github.com/MomX) with:
+You can install the current CRAN version with:
+```{r, eval=FALSE}
+install.packages("Momfarm")
+```
 
-``` r
-# install.packages("devtools")
+But I recommend using - and typically only support - the development version that lives on [GitHub](https://github.com/MomX/Momfarm):
+
+```{r, eval=FALSE}
+# if you do not have devtools yet:
+install.packages("devtools") 
+# then:
 devtools::install_github("MomX/Momfarm")
 ```
 ## Example
 
-```{r example}
-# plot_outlines <- function(s){
-#   s %>% paper_white %>% draw_outlines(col="pink")
-# }
-#
-# mate <- homogeneize(shapes[11], shapes[4], sample=240)
-#
-# for (i in seq(0, 1, length=100)){
-#   hybridize(mate, cross=i) %>% plot_outlines()
-#   Sys.sleep(1/10)
-# }
+```{r example, message=FALSE}
+library(Momfarm)
+s <- shapes %>% pick(1:2)
+s
+s %>% homogeneize() %>% 
+  cross(steps=20) %>% 
+  paper_white %>% draw_outlines()
 ```
 
+----
+Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.

@@ -8,20 +8,17 @@
 #'
 #' @examples
 #' # two shapes, comma separated
-#' homogeneize(shapes[1], shapes[2])
-#'
-#' # list of shapes, in a pipe, and drawing
-#' shapes[1:2] %>% homogeneize %>%
-#'  paper %>% draw_outlines
+#' list(shapes[1], shapes[2]) %>% pile()
+#' homogeneize(shapes[1], shapes[2]) %>% pile()
 #'
 #' # with params
-#' shapes[1:10] %>% homogeneize(sample=12, procrustes=FALSE) %>%
-#'  paper %>% draw_outlines(col=pal_seq_Blues(10, 0.5))
+#' shapes[1:5] %>% homogeneize(sample=120, procrustes=FALSE) %>%
+#'  paper %>% draw_outlines(col=pal_qual(5, 0.5))
 #'
 #' @export
 homogeneize <- function(..., sample=60, procrustes=TRUE, center=TRUE, template=TRUE){
   # silent but restore afterwards
-  op <- options("verbose"=FALSE)
+  op <- options("Momocs_verbose"=FALSE)
   on.exit(op)
 
   # turn .. to a list
@@ -48,6 +45,6 @@ homogeneize <- function(..., sample=60, procrustes=TRUE, center=TRUE, template=T
     s <- lapply(s, Momocs::coo_template)
 
   # return this beauty
-  s
+  cool(s)
 }
 
