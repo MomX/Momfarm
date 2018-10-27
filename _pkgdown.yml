@@ -1,0 +1,46 @@
+url: http://momx.github.io/Momfarm/
+
+template:
+  params:
+    bootswatch: flatly
+
+home:
+  strip_header: false
+
+navbar:
+  type: default
+  right:
+  - icon: fa-github fa-lg
+    href: https://github.com/MomX/Momocs
+
+authors:
+  Vincent Bonhomme:
+    href: http://www.vincentbonhomme.fr
+
+
+reference:
+
+- title: cool operations
+  contents:
+  - homogeneize
+  - cross
+  - cross_g
+
+- title: cool handlers
+  desc: To ease working with list of shapes
+  contents:
+  - pick
+  - clone
+
+- title: coo/l helpers
+  desc: Same as above but mostly internals
+  contents:
+  - cool
+  - as_coo
+  - is_coo
+  - check_coo
+  - as_cool
+  - is_cool
+  - check_cool
+  - print.cool
+  - plot.cool

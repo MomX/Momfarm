@@ -5,6 +5,8 @@ Date: 2018-10-27
 Description: Breed shapes on top of Momocs. 
              Momfarm is, mostly and so far, a place to prototype on shapes visualization.
 Authors@R: person("Vincent", "Bonhomme", email = "bonhomme.vincent@gmail.com", role = c("aut", "cre"))
+URL: https://github.com/MomX/Momfarm
+BugReports: https://github.com/MomX/Momfarm/issues
 License: GPL-3 + file LICENSE
 Encoding: UTF-8
 LazyData: true
