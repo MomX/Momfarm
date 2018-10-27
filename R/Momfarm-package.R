@@ -13,7 +13,6 @@
 #' @name Momfarm
 NULL
 
-
 # welcome message
 .onAttach <- function(lib, pkg) {
   packageStartupMessage('This is Momfarm ',
@@ -38,7 +37,7 @@ Momfarm_help <- function (topic = NULL) {
 
 #' @rdname Momfarm_helpers
 #' @export
-Momfarm_website <- function(){
+Momfarm <- function(){
   utils::browseURL("http://momx.github.io/Momfarm")
 }
 

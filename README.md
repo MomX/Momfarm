@@ -57,6 +57,8 @@ s %>% homogeneize() %>%
 
 <img src="man/figures/README-example-2.png" width="100%" />
 
+Try the example in `cross_g` as well, to interactively cross shapes.
+
 -----
 
 Please note that this project is released with a [Contributor Code of
