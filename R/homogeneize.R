@@ -1,7 +1,7 @@
 #' Homogeneize for most differences
 #'
 #' @param ... `list` of shapes or comma-separated shapes
-#' @param sample if `numeric` (default=60 defau), resample this number of points with [Momocs::coo_sample]
+#' @param sample if `numeric` (default=60), resample this number of points with [Momocs::coo_sample]
 #' @param procrustes `logical` (default=TRUE) whether to remove position, size, rotation differences with [Momocs::fgProcrustes]
 #' @param center `logical` (default=TRUE) whether to center shapes with [Momocs::coo_center]
 #' @param template `logical` (default=TRUE) whether to template shapes with [Momocs::coo_template]

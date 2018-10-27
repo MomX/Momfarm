@@ -10,7 +10,7 @@ homogeneize(..., sample = 60, procrustes = TRUE, center = TRUE,
 \arguments{
 \item{...}{\code{list} of shapes or comma-separated shapes}
 
-\item{sample}{if \code{numeric} (default=60 defau), resample this number of points with \link[Momocs:coo_sample]{Momocs::coo_sample}}
+\item{sample}{if \code{numeric} (default=60), resample this number of points with \link[Momocs:coo_sample]{Momocs::coo_sample}}
 
 \item{procrustes}{\code{logical} (default=TRUE) whether to remove position, size, rotation differences with \link[Momocs:fgProcrustes]{Momocs::fgProcrustes}}
 
